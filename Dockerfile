@@ -27,8 +27,7 @@ RUN sudo apt-get install atlassian-plugin-sdk
 
 RUN atlas-version
 
-RUN atlas-run-standalone --product jira --version 6.4-OD-05-009 --bundled-plugins com.atlassian.jwt:jwt-plugin:1.1.0,com.atlassian.bundles:json-schema-validator-atlassian-bundle:1.0.4,com.atlassian.webhooks:atlassian-webhooks-plugin:1.0.6,com.atlassian.upm:atlassian-universal-plugin-manager-plugin:2.17.14-D20140902T224549,com.atlassian.plugins:atlassian-connect-plugin:1.1.4 --jvmargs -Datlassian.upm.on.demand=true
-
+RUN atlas-run-standalone --product jira --version 6.4-OD-11-012 --bundled-plugins com.atlassian.bundles:json-schema-validator-atlassian-bundle:1.0.4,com.atlassian.webhooks:atlassian-webhooks-plugin:1.0.6,com.atlassian.jwt:jwt-plugin:1.2.2,com.atlassian.upm:atlassian-universal-plugin-manager-plugin:2.18.2-D20141112T015724,com.atlassian.plugins:atlassian-connect-plugin:1.1.15 --jvmargs -Datlassian.upm.on.demand=true
 ADD tomcat.sh /data/amps-standalone/
 
 RUN chmod 777 /data/amps-standalone/target/container/tomcat7x/apache-tomcat-7.0.40/bin/catalina.sh
